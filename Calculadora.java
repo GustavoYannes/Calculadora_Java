@@ -99,9 +99,13 @@ public class Calculadora {
 
     /**
      * Recebe os valores das variaveis da classe e realiza a operação de divisão, depois retorna o resultado.
+     * Se o valor2 for igual a zero, lança uma exceção IllegalArgumentException com a mensagem "Divisão por zero não é permitida."
      * @return
      */
     public double dividir(){
+        if(valor2 == 0){
+            throw new IllegalArgumentException("Divisão por zero não é permitida.");
+        }
         resultado = valor1 / valor2;
         return resultado;
     }
